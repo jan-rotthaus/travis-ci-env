@@ -1,3 +1,4 @@
+const yourName = process.env.YOUR_NAME;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -5,7 +6,6 @@ function sleep(ms) {
 
 async function main() {
   while (true) {
-    const yourName = process.env.YOUR_NAME;
     console.log(`Hello ${yourName}!`);
     await sleep(5000);
   }
